@@ -7,7 +7,10 @@ which your function is dependent and that will be bundled with your function on
 deployment. If you do not need to use cmdlets from this module you can safely delete
 this statement.
 
+Example:
+Open Powershell Host > 6.0 and run the following commands
+1)  Publish-AWSPowerShellLambda -ScriptPath RekognitionPSScript.ps1 -Name  RekognitionPSScript -Region us-east-1
+2)  cd C:\Users\<user>\AppData\Local\Temp\RekognitionPSScript
+3)  dotnet lambda package --output-package ./RekognitionPSScript.zip
 
-
-
-C:\Users\vedantham_ram\AppData\Local\Temp\TextractPSScript>dotnet lambda deploy-function
+Zip file is ready for upload through AWS Lambda console.
